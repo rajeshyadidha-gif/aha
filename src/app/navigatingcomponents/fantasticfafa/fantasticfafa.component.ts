@@ -1,0 +1,16 @@
+import { Component } from '@angular/core';
+import { FantasticfafaService } from 'src/app/navigatingcomponenets/service copy/fantasticfafa.service';
+
+@Component({
+  selector: 'app-fantasticfafa',
+  templateUrl: './fantasticfafa.component.html',
+  styleUrls: ['./fantasticfafa.component.css']
+})
+export class FantasticfafaComponent {
+   images:any;
+  constructor(private service:FantasticfafaService){}
+  ngOnInit(){
+     this.service.ram().subscribe(data=>this.images=data);
+ 
+ }
+}

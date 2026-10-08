@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { RegionalmixService } from 'src/app/navigatingcomponenets/service copy/regionalmix.service';
+
+@Component({
+  selector: 'app-regionalmix',
+  templateUrl: './regionalmix.component.html',
+  styleUrls: ['./regionalmix.component.css']
+})
+export class RegionalmixComponent {
+    images:any;
+   constructor(private service:RegionalmixService){}
+   ngOnInit(){
+      this.service.ram().subscribe(data=>this.images=data);
+  
+  }
+
+}
